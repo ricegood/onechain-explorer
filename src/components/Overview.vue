@@ -106,7 +106,7 @@ export default {
       n = n | 0;
       if (this.switch1) {
         this.inter1 = setInterval(() => {
-          const baseURI = 'http://localhost:3001';
+          const baseURI = 'https://endpoint.ainize.ai/lukepark327/onechain';
           this.$http.get(`${baseURI}/blocks`)
           .then((result) => {
             this.blocks = result.data.slice((-1 * n)).reverse();
@@ -122,7 +122,7 @@ export default {
     },    
     getLatestBlocksOnce: function (n) {
       n = n | 0;
-      const baseURI = 'http://localhost:3001';
+      const baseURI = 'https://endpoint.ainize.ai/lukepark327/onechain';
       this.$http.get(`${baseURI}/blocks`)
       .then((result) => {
         this.blocks = result.data.slice((-1 * n)).reverse();

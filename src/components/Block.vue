@@ -108,7 +108,7 @@ export default {
       return (key === "previousHash" || key === "merkleRoot");
     },
     getBlock: function (n) {
-      const baseURI = 'http://localhost:3001';
+      const baseURI = 'https://endpoint.ainize.ai/lukepark327/onechain';
       this.$http.get(`${baseURI}/block/` + n)
       .then((result) => {
         this.block = result.data;
