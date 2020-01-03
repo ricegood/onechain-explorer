@@ -36,9 +36,14 @@
   </v-app>
 -->
 <div :style="{'background-image': 'url(' + require('./images/bg.jpg') + ')'}" style="height:100%; width:100%; background-size: cover; background-repeat: no-repeat; background-position:center center;">
-  <div style="height:100%; width:100%; background-color:rgba(0, 0, 0, 0.3);">
-    <div class="uk-position-top">
-      <Nav />
+  <div style="height:100%; width:100%; background-color:rgba(0, 0, 0, 0.6);">
+    <div uk-grid style="margin: 0 0 0 0;">
+      <div class="uk-width-1-6@m" style="padding: 0 0 0 0;"></div>
+      <div class="uk-width-2-3@m" style="padding: 0 0 0 0;">
+        <Nav />
+        <Home />
+      </div>
+      <div class="uk-width-1-6@m" style="padding: 0 0 0 0;"></div>
     </div>
   </div>
 </div>
@@ -46,10 +51,12 @@
 
 <script>
 import Nav from './components/Nav';
+import Home from './components/Home';
 
 export default {
   components: {
     Nav,
+    Home,
   },
 };
 </script>

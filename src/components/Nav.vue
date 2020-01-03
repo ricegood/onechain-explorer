@@ -1,12 +1,10 @@
 <template>
+  <div>
         <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-	  <div class="uk-width-1-6@m">
-	  </div>
-	  <div class="uk-width-2-3@m">
             <div class="uk-light uk-navbar">
 	      <a class="uk-navbar-item uk-logo" href="#" style="font-family:'Roboto Mono',monospace; font-size:xx-large; font-weight:700;">VMOlab.</a>
 	    </div>
-            <div class="uk-light uk-navbar">
+            <div class="uk-light uk-navbar-right">
                 <ul class="uk-navbar-nav">
                     <li class="uk-active"><a href="#">Home</a></li>
                     <li>
@@ -35,8 +33,6 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
-	  </div>
-	  <div class="uk-width-1-6@m">
-	  </div>
         </nav>
+  </div>
 </template>
