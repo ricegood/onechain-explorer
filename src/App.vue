@@ -35,8 +35,10 @@
     </v-content>
   </v-app>
 -->
-<div>
-  <Nav />
+<div :style="{'background-image': 'url(' + require('./images/bg.jpg') + ')'}" style="height:100%; width:100%; background-size: cover; background-repeat: no-repeat; background-position:center center;">
+  <div class="uk-position-top">
+    <Nav />
+  </div>
 </div>
 </template>
 

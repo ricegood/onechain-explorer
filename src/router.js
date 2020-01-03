@@ -1,6 +1,4 @@
 import Vue from 'vue'
-import AtUI from 'at-ui';
-import 'at-ui-style';
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Block from './views/Block.vue'
