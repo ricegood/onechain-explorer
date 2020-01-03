@@ -1,4 +1,5 @@
 <template>
+<!--
   <v-app>
     <v-app-bar app>
       <v-toolbar-title class="headline text-uppercase">
@@ -12,13 +13,13 @@
         </router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <!-- -->
+      
       <router-link :to="{name: 'send',}"
         tag='v-btn'
       >
         <v-btn text>SEND</v-btn>
       </router-link>
-      <!-- -->
+      
       <v-btn
         text
         href="https://github.com/twodude/onechain/releases/latest"
@@ -33,7 +34,18 @@
       <router-view/>
     </v-content>
   </v-app>
+-->
+<div>
+  <Nav />
+</div>
 </template>
 
 <script>
+import Nav from './components/Nav';
+
+export default {
+  components: {
+    Nav,
+  },
+};
 </script>
