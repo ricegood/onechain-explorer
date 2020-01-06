@@ -34,6 +34,7 @@
                     <li><router-link to="/publication">Publication</router-link></li>
                     <li><router-link to="/news">News</router-link></li>
                     <li><router-link to="/contact">Contact</router-link></li>
+                    <li><router-link to="/overview" uk-icon="icon: album"></router-link></li>
                 </ul>
             </div>
         </nav>
