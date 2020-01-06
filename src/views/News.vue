@@ -1,6 +1,10 @@
 <template>
 <div>
-  <List category="news" />
+  <!-- Iterate recent 5 years -->
+  <div v-for="i in 5">
+    <h1 class="uk-light">{{currentYear+1-i}}</h1>
+    <List category="news" :year="currentYear+1-i" type="A"/>
+  </div>
 </div>
 </template>
 
@@ -8,6 +12,11 @@
 import List from '../components/List';
 
 export default {
+  data: function () {
+    return {
+      currentYear: 2020,
+    }
+  },
   components: {
     List,
   },
