@@ -75,6 +75,13 @@
                     <span>{{ value | truncate(12) }}</span>
                   </td>
                 </tr>
+                <tr v-for="(value, index) in block.data" :key="index">
+                  <td>
+                    <span>                                                  
+                      {{ value }}             
+                    </span>  
+                  </td>                                         
+                </tr>
               </tbody>
             </v-simple-table>
           </v-card-text>
@@ -106,7 +113,8 @@ export default {
       n = n | 0;
       if (this.switch1) {
         this.inter1 = setInterval(() => {
-          const baseURI = 'https://endpoint.ainize.ai/lukepark327/onechain';
+          //const baseURI = 'https://endpoint.ainize.ai/lukepark327/onechain';
+          const baseURI = 'http://lynx.snu.ac.kr:8082';
           this.$http.get(`${baseURI}/blocks`)
           .then((result) => {
             this.blocks = result.data.slice((-1 * n)).reverse();
@@ -122,7 +130,8 @@ export default {
     },    
     getLatestBlocksOnce: function (n) {
       n = n | 0;
-      const baseURI = 'https://endpoint.ainize.ai/lukepark327/onechain';
+      //const baseURI = 'https://endpoint.ainize.ai/lukepark327/onechain';
+      const baseURI = 'http://lynx.snu.ac.kr:8082';
       this.$http.get(`${baseURI}/blocks`)
       .then((result) => {
         this.blocks = result.data.slice((-1 * n)).reverse();

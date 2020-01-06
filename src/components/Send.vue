@@ -109,7 +109,8 @@ export default {
       const l = this.loader;
       this[l] = true;
 
-      const baseURI = 'https://endpoint.ainize.ai/lukepark327/onechain';
+      //const baseURI = 'https://endpoint.ainize.ai/lukepark327/onechain';
+      const baseURI = 'http://lynx.snu.ac.kr:8082';
       this.$http.post(`${baseURI}/mineBlock`, {
         headers: {
           'Content-type': 'application/json'

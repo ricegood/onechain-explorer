@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import Overview from './views/Overview.vue'
 import People from './views/People.vue'
 import Research from './views/Research.vue'
 import Publication from './views/Publication.vue'
@@ -16,6 +17,11 @@ export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
+    {
+      path: '/overview',
+      name: 'overview',
+      component: Overview
+    },
     {
       path: '/',
       name: 'home',

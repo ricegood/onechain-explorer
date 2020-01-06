@@ -1,6 +1,6 @@
 <template>
 <div>
-  <List />
+  <List category="news" />
 </div>
 </template>
 
