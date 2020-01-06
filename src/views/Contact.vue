@@ -1,7 +1,14 @@
 <template>
 <div>
-  map<br/>
-  contact<br/>
-  apply
+  <h1 class="uk-light">Contact</h1>
+  <h3 class="uk-light">ADDRESS</h3>
+  <span class="uk-light">(08826) 서울특별시 관악구 관악로1 서울대학교 공과대학 전기정보공학부 #012 VM&O 연구실</span>
+  <h3 class="uk-light">TEL</h3>
+  <span class="uk-light">
+    (02) 880-1767<br/>
+    (02) 880-9372 (비서 : 이미순)
+  </span>
+  <h3 class="uk-light">FAX</h3>
+  <span class="uk-light">(02) 882-4656</span>
 </div>
 </template>
