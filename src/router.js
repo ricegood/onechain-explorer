@@ -1,6 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import People from './views/People.vue'
+import Research from './views/Research.vue'
+import Publication from './views/Publication.vue'
+import News from './views/News.vue'
+import Contact from './views/Contact.vue'
 import Block from './views/Block.vue'
 import Send from './views/Send.vue'
 import Page404 from './views/404.vue'
@@ -15,6 +20,31 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/people',
+      name: 'people',
+      component: People
+    },
+    {
+      path: '/research',
+      name: 'research',
+      component: Research
+    },
+    {
+      path: '/publication',
+      name: 'publication',
+      component: Publication
+    },
+    {
+      path: '/news',
+      name: 'news',
+      component: News
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: Contact
     },
     {
       path: '/about',

@@ -1,7 +1,4 @@
 import Vue from 'vue'
-import Vuikit from 'vuikit'
-import VuikitIcons from '@vuikit/icons'
-import '@vuikit/theme'
 
 import App from './App.vue'
 import router from './router'
@@ -12,8 +9,6 @@ import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
 Vue.prototype.$http = axios
 Vue.use(truncate)
-Vue.use(Vuikit)
-Vue.use(VuikitIcons)
 Vue.config.productionTip = false
 
 new Vue({

@@ -1,13 +1,15 @@
 <template>
-  <Home />
+<div>
+  <List />
+</div>
 </template>
 
 <script>
-import Home from '../components/Home';
+import List from '../components/List';
 
 export default {
   components: {
-    Home,
+    List,
   },
 };
 </script>

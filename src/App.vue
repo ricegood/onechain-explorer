@@ -34,14 +34,15 @@
       <router-view/>
     </v-content>
   </v-app>
+<div style="min-height:100%; width:100%; background-color:black;">
 -->
-<div :style="{'background-image': 'url(' + require('./images/bg.jpg') + ')'}" style="height:100%; width:100%; background-size: cover; background-repeat: no-repeat; background-position:center center;">
-  <div style="height:100%; width:100%; background-color:rgba(0, 0, 0, 0.6);">
+<div :style="{'background-image': 'url(' + require('./images/bg.jpg') + ')'}" style="min-height:100%; width:100%; background-size: cover; background-repeat: no-repeat; background-position:center center;">
+  <div style="min-height:100%; width:100%; background-color:rgba(0, 0, 0, 0.6);">
     <div uk-grid style="margin: 0 0 0 0;">
       <div class="uk-width-1-6@m" style="padding: 0 0 0 0;"></div>
-      <div class="uk-width-2-3@m" style="padding: 0 0 0 0;">
+      <div class="uk-width-2-3@m" style="padding: 0 0 0 0; height:100%;">
         <Nav />
-        <Home />
+	<router-view/>
       </div>
       <div class="uk-width-1-6@m" style="padding: 0 0 0 0;"></div>
     </div>
