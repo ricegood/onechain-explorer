@@ -15,7 +15,7 @@ import List from '../components/List';
 export default {
   data: function () {
     return {
-      currentYear: 2020,
+      currentYear: new Date().getFullYear(),
     }
   },
   components: {
