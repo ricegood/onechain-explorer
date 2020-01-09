@@ -1,9 +1,5 @@
-html, body {
-  font-family: 'Roboto Mono', monospace;
-}
-
 .aurora-outer {
-    background: linear-gradient(45deg, #EEEEEE 0%, #ECCBA9 49%, #ECECA9 82%);
+    background: linear-gradient(45deg, #EEEEEE 0%, #ECA9A9 49%, #ECECA9 82%);
     background-size: 200%;
     animation: aurora 10s infinite;
 }
@@ -12,4 +8,25 @@ html, body {
     background: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
     background-size: 200%;
     animation: aurora 7s infinite;
+}
+
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto Mono', monospace;
+}
+
+#particles {
+  width: 100%;
+  height: 100%;
+}
+
+.intro {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  padding: 0 20px;
+  width: 100%;
+  text-align: center;
 }

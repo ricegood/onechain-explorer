@@ -37,11 +37,11 @@
 <div style="min-height:100%; width:100%; background-color:black;">
 -->
 <!--div :style="{'background-image': 'url(' + require('./images/bg.jpg') + ')'}" style="min-height:100%; width:100%; background-size: cover; background-repeat: no-repeat; background-position:center center;"-->
-<div style="min-height:100%; width:100%;">
-  <div style="min-height:100%; width:100%;">
+<div style="width:100%;">
+  <div style="width:100%;">
     <div uk-grid style="margin: 0 0 0 0;">
       <div class="uk-width-1-6@l" style="padding: 0 0 0 0;"></div>
-      <div class="uk-width-2-3@l" style="padding: 0px 30px 30px 30px; height:100%;">
+      <div class="uk-width-2-3@l" style="padding: 0px 30px 30px 30px;">
         <Nav />
 	<router-view/>
       </div>
