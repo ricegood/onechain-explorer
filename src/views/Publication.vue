@@ -2,7 +2,7 @@
 <div>
   <!-- Iterate recent 15 years -->
   <div v-for="i in 15">
-    <h1 class="uk-light">{{currentYear+1-i}}</h1>
+    <h1>{{currentYear+1-i}}</h1>
     <List category="publication" :year="currentYear+1-i" type="C"/>
     <List category="publication" :year="currentYear+1-i" type="J"/>
   </div>

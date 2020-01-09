@@ -1,6 +1,6 @@
 <template>
 <div>
-<!-- <div class="uk-section uk-section-default uk-light" style="background-color:rgb(0,0,0,0);"> -->
+<!-- <div class="uk-section uk-section-default" style="background-color:rgb(0,0,0,0);"> -->
 <div class="uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
   <Cardb/>
   <Cardb/>

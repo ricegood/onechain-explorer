@@ -1,6 +1,6 @@
 <template>
 <div>
-<div class="uk-light">
+<div>
     <ul class="uk-tab-bottom uk-flex-center" uk-tab>
         <li><router-link to="/research">Research</router-link></li>
         <li><router-link to="/demo">Demo</router-link></li>

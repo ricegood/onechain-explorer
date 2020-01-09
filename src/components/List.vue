@@ -11,12 +11,12 @@
 <template>
 <div>
 <!-- Subtitle depending on types -->
-<h3 class="uk-light" v-if="type === 'C'">International Conference</h3>
-<h3 class="uk-light" v-if="type === 'J'">International Journal</h3>
-<h3 class="uk-light" v-if="type === 'A'">Award</h3>
+<h3 class="" v-if="type === 'C'">International Conference</h3>
+<h3 class="" v-if="type === 'J'">International Journal</h3>
+<h3 class="" v-if="type === 'A'">Award</h3>
 
 <div v-for="(block, index) in blocks" :key="index">
-<dl class="uk-light uk-description-list uk-description-list-divider" v-for="(value, index) in block.data" :key="index">
+<dl class="uk-description-list uk-description-list-divider" v-for="(value, index) in block.data" :key="index">
     <dt v-if="index === 0">{{value}}</dt>
     <dd v-else>{{value}}</dd>
 </dl>

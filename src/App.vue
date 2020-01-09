@@ -38,7 +38,7 @@
 -->
 <!--div :style="{'background-image': 'url(' + require('./images/bg.jpg') + ')'}" style="min-height:100%; width:100%; background-size: cover; background-repeat: no-repeat; background-position:center center;"-->
 <div style="min-height:100%; width:100%;">
-  <div style="min-height:100%; width:100%; background-color:rgba(0, 0, 0, 1);">
+  <div style="min-height:100%; width:100%; background-color:#F2F4F4;">
     <div uk-grid style="margin: 0 0 0 0;">
       <div class="uk-width-1-6@l" style="padding: 0 0 0 0;"></div>
       <div class="uk-width-2-3@l" style="padding: 0px 30px 30px 30px; height:100%;">
