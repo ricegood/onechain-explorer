@@ -1,12 +1,10 @@
 <template>
 <div>
 <!-- <div class="uk-section uk-section-default uk-light" style="background-color:rgb(0,0,0,0);"> -->
-<div class="uk-child-width-1-3@m" uk-grid>
+<div class="uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid>
   <Cardb/>
   <Cardb/>
   <Cardb/>
-</div>
-<div class="uk-child-width-1-3@m" uk-grid>
   <Cardb/>
   <Cardb/>
   <Cardb/>
