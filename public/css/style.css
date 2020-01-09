@@ -1,3 +1,15 @@
 html, body {
   font-family: 'Roboto Mono', monospace;
 }
+
+.aurora-outer {
+    background: linear-gradient(45deg, #EEEEEE 0%, #ECCBA9 49%, #ECECA9 82%);
+    background-size: 200%;
+    animation: aurora 10s infinite;
+}
+
+.aurora-inner {
+    background: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
+    background-size: 200%;
+    animation: aurora 7s infinite;
+}
