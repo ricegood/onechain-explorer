@@ -5735,11 +5735,11 @@ ul.uk-nav-sub {
  * Adopts `uk-close`
  ========================================================================== */
 .uk-offcanvas-close {
-  position: absolute;
+  /*position: absolute;
   z-index: 1000;
   top: 20px;
   right: 20px;
-  padding: 5px;
+  padding: 5px;*/
 }
 /* Overlay
  ========================================================================== */
