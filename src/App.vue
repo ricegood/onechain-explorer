@@ -40,7 +40,7 @@
   <div style="min-height:100%; width:100%; background-color:rgba(0, 0, 0, 0.6);">
     <div uk-grid style="margin: 0 0 0 0;">
       <div class="uk-width-1-6@m" style="padding: 0 0 0 0;"></div>
-      <div class="uk-width-2-3@m" style="padding: 0px 15px 5px 15px; height:100%;">
+      <div class="uk-width-2-3@m" style="padding: 0px 30px 30px 30px; height:100%;">
         <Nav />
 	<router-view/>
       </div>
