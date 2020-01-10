@@ -1,5 +1,5 @@
 <template>
-<div style="height:calc(100vh - 80px);">
+<div style="height:calc(100vh - 90px);">
   <div id="particles">
     <div class="intro">
       <Home />
