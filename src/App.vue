@@ -1,7 +1,9 @@
 <template>
 <div style="min-height:100vh">
   <Nav class="uk-padding-nav"/>
-  <router-view/>
+  <transition name="fade">
+    <router-view/>
+  </transition>
 </div>
 </template>
 

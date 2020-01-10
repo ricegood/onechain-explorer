@@ -10,6 +10,18 @@
     animation: aurora 7s infinite;
 }
 
+.fade-enter-active, .fade-leave-active {
+  transition-property: opacity;
+  transition-duration: .25s;
+}
+
+.fade-enter-active {
+  transition-delay: .25s;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
 
 html, body {
   width: 100%;

@@ -1,28 +1,41 @@
 <template>
 <div class="uk-padding-contents">
-  <div>
-    <ul class="uk-tab-bottom uk-flex-center" uk-tab>
-        <li><router-link to="/research">Research</router-link></li>
-        <li><router-link to="/demo">Demo</router-link></li>
-        <li><router-link to="/technicalreport">Technical Report</router-link></li>
-    </ul>
-  </div>
-  <div>
-    <CardR />
-    <CardL />
-    <CardR />
-  </div>
+<ul class="uk-subnav uk-subnav-pill" uk-switcher="animation: uk-animation-fade; swiping: false;">
+    <li><a href="#">Research</a></li>
+    <li><a href="#">Demo</a></li>
+    <li><a href="#">Technical Report</a></li>
+</ul>
+
+<ul class="uk-switcher uk-margin">
+    <li>
+      <div>
+        <CardR />
+        <CardL />
+        <CardR />
+      </div>
+    </li>
+    <li>
+      <Slider />
+    </li>
+    <li>
+      <Table />
+    </li>
+</ul>
 </div>
 </template>
 
 <script>
 import CardR from '../components/Card-right';
 import CardL from '../components/Card-left';
+import Slider from '../components/Slider';
+import Table from '../components/Table';
 
 export default {
   components: {
     CardR,
     CardL,
+    Slider,
+    Table,
   },
 };
 </script>

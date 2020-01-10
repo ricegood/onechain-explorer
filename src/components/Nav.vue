@@ -40,7 +40,7 @@
                 </ul>
             </div>
             <div class="uk-navbar-right uk-hidden@m">
-                <a class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #offcanvas-nav-primary"></a>
+                <a class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #offcanvas-nav-primary" style="padding:0px 0px 0px 0px"></a>
             </div>
         </nav>
         <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true; flip: true">
