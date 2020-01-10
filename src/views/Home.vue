@@ -3,6 +3,7 @@
   <div id="particles">
     <div class="intro">
       <Home />
+      <ThemeSwitch />
     </div>
   </div>
 </div>
@@ -28,10 +29,12 @@ $(document).ready(function() {
 });
 
 import Home from '../components/Home';
+import ThemeSwitch from '../components/ThemeSwitch';
 
 export default {
   components: {
     Home,
+    ThemeSwitch,
   },
 };
 </script>
