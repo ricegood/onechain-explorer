@@ -1,5 +1,6 @@
 <template>
 <div>
+<Nav />
 <div>
     <ul class="uk-tab-bottom uk-flex-center" uk-tab>
         <li><router-link to="/research">Research</router-link></li>
@@ -16,11 +17,13 @@
 </template>
 
 <script>
+import Nav from '../components/Nav';
 import CardR from '../components/Card-right';
 import CardL from '../components/Card-left';
 
 export default {
   components: {
+    Nav,
     CardR,
     CardL,
   },

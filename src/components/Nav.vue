@@ -2,9 +2,9 @@
   <div>
         <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
             <div class="uk-navbar uk-animation-toggle" tabindex="0">
-	      <router-link to="/" style="text-decoration: none;">
-	        <a class="uk-navbar-item uk-logo uk-animation-fade" href="#" style="padding:0 0 0 0;font-family:'Roboto Mono',monospace; font-size:xx-large; font-weight:700;">VMOlab.</a>
-	      </router-link>
+	      <!--router-link to="/" style="text-decoration: none;"-->
+	        <a class="uk-navbar-item uk-logo uk-animation-fade" href="/" style="padding:0 0 0 0;font-family:'Roboto Mono',monospace; font-size:xx-large; font-weight:700;">VMOlab.</a>
+	      <!--/router-link-->
 	    </div>
             <div class="uk-navbar-right uk-visible@m">
                 <ul class="uk-navbar-nav">

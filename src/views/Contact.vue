@@ -1,5 +1,7 @@
 <template>
 <div>
+  <Nav />
+  <div>
   <h1>Contact</h1>
   <h3>ADDRESS</h3>
   <span>(08826) 서울특별시 관악구 관악로1 서울대학교 공과대학 전기정보공학부 #012 VM&O 연구실</span>
@@ -10,5 +12,16 @@
   </span>
   <h3>FAX</h3>
   <span>(02) 882-4656</span>
+  </div>
 </div>
 </template>
+
+<script>
+import Nav from '../components/Nav';
+
+export default {
+  components: {
+    Nav,
+  },
+};
+</script>
