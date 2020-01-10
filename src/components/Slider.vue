@@ -1,5 +1,5 @@
 <template>
-<div uk-slider="center: true">
+<div uk-slider="center: true; autoplay: true; index: 0; finite: true; autoplay-interval: 3000;">
 
     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
 
