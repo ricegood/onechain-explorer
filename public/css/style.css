@@ -1,3 +1,9 @@
+.uk-light.aurora-outer {
+    background: linear-gradient(45deg, #5F5858 0%, #201818 49%, #000000 82%);
+    background-size: 200%;
+    animation: aurora 10s infinite;
+}
+
 .aurora-outer {
     background: linear-gradient(45deg, #EEEEEE 0%, #ECA9A9 49%, #ECECA9 82%);
     background-size: 200%;

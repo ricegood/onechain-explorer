@@ -10,10 +10,18 @@
 
 <script>
 $(document).ready(function() {
-  $('#particles').particleground({
-    dotColor: '#ECD5D5',
-    lineColor: '#ECD5D5'
-  });
+  if ($("#html").hasClass("uk-light")) {
+    $('#particles').particleground({
+      dotColor: '#726D6D',
+      lineColor: '#726D6D'
+    });
+  }
+  else {
+    $('#particles').particleground({
+      dotColor: '#ECD5D5',
+      lineColor: '#ECD5D5'
+    });
+  }
   $('.intro').css({
     'margin-top': -($('.intro').height() / 2)
   });
