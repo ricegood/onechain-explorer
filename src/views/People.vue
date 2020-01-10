@@ -12,12 +12,12 @@
 </template>
 
 <script>
-import Person from '../components/Person';
+//import Person from '../components/Person';
 import Cardb from '../components/Card-bottom';
 
 export default {
   components: {
-    Person,
+    //Person,
     Cardb,
   },
 };
