@@ -3,13 +3,13 @@
         <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
             <div class="uk-navbar uk-animation-toggle" tabindex="0">
 	      <!--router-link to="/" style="text-decoration: none;"-->
-	        <a class="uk-navbar-item uk-logo uk-animation-fade" href="/" style="padding:0 0 0 0;font-family:'Roboto Mono',monospace; font-size:xx-large; font-weight:700;">VMOlab.</a>
+	        <a class="uk-navbar-item uk-logo uk-animation-fade" href="/" style="padding:0 0 0 0;font-family:'Roboto Mono',monospace; font-size:xxx-large; font-weight:700;">VMOlab.</a>
 	      <!--/router-link-->
 	    </div>
             <div class="uk-navbar-right uk-visible@m">
                 <ul class="uk-navbar-nav">
                     <li>
-                        <router-link to="/people">People</router-link>
+                        <router-link to="/people"><span style="font-family:'Roboto Mono',monospace; font-size:large; font-weight:400;">People</span></router-link>
 			<!--
                         <div class="uk-navbar-dropdown">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
@@ -22,7 +22,7 @@
 			-->
                     </li>
                     <li>
-                        <router-link to="/research">Research</router-link>
+                        <router-link to="/research"><span style="font-family:'Roboto Mono',monospace; font-size:large; font-weight:400;">Research</span></router-link>
 			<!--
                         <div class="uk-navbar-dropdown">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
@@ -33,9 +33,9 @@
                         </div>
 			-->
                     </li>
-                    <li><router-link to="/publication">Publication</router-link></li>
-                    <li><router-link to="/news">News</router-link></li>
-                    <li><router-link to="/contact">Contact</router-link></li>
+                    <li><router-link to="/publication"><span style="font-family:'Roboto Mono',monospace; font-size:large; font-weight:400;">Publication</span></router-link></li>
+                    <li><router-link to="/news"><span style="font-family:'Roboto Mono',monospace; font-size:large; font-weight:400;">News</span></router-link></li>
+                    <li><router-link to="/contact"><span style="font-family:'Roboto Mono',monospace; font-size:large; font-weight:400;">Contact</span></router-link></li>
                     <li><router-link to="/overview" uk-icon="icon: album"></router-link></li>
                 </ul>
             </div>

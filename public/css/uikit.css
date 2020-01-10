@@ -8816,22 +8816,22 @@ iframe.uk-cover {
    Component: Padding
  ========================================================================== */
 .uk-padding-nav {
-  padding: 0px 30px 0px 30px;
+  padding: 10px 30px 0px 30px;
 }
 /* Desktop and bigger */
 @media (min-width: 1400px) {
   .uk-padding-nav {
-    padding: 0px 300px 0px 300px;
+    padding: 10px 300px 0px 300px;
   }
 }
 
 .uk-padding-contents {
-  padding: 0px 30px 30px 30px;
+  padding: 10px 30px 30px 30px;
 }
 /* Desktop and bigger */
 @media (min-width: 1400px) {
   .uk-padding-contents {
-    padding: 0px 300px 30px 300px;
+    padding: 10px 300px 30px 300px;
   }
 }
 
