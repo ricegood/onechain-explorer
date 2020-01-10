@@ -1,7 +1,6 @@
 <template>
-<div style="height:100vh">
-  <Nav />
-  <div id="particles" style="height:calc(100% - 80px);">
+<div style="height:calc(100vh - 80px);">
+  <div id="particles">
     <div class="intro">
       <Home />
     </div>
@@ -21,12 +20,10 @@ $(document).ready(function() {
 });
 
 import Home from '../components/Home';
-import Nav from '../components/Nav';
 
 export default {
   components: {
     Home,
-    Nav,
   },
 };
 </script>

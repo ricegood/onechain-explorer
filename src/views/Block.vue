@@ -1,17 +1,14 @@
 <template>
-<div>
-  <Nav />
+<div class="uk-padding-contents">
   <Block />
 </div>
 </template>
 
 <script>
-import Nav from '../components/Nav';
 import Block from '../components/Block';
 
 export default {
   components: {
-    Nav,
     Block,
   },
 };

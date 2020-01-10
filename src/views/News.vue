@@ -1,6 +1,5 @@
 <template>
-<div>
-  <Nav />
+<div class="uk-padding-contents">
   <!-- Iterate recent 5 years -->
   <div v-for="i in 5">
     <h1>{{currentYear+1-i}}</h1>
@@ -10,7 +9,6 @@
 </template>
 
 <script>
-import Nav from '../components/Nav';
 import List from '../components/List';
 
 export default {
@@ -20,7 +18,6 @@ export default {
     }
   },
   components: {
-    Nav,
     List,
   },
 };

@@ -1,17 +1,14 @@
 <template>
-<div>
-  <Nav />
+<div class="uk-padding-contents">
   <Overview />
 </div>
 </template>
 
 <script>
-import Nav from '../components/Nav';
 import Overview from '../components/Overview';
 
 export default {
   components: {
-    Nav,
     Overview,
   },
 };

@@ -1,6 +1,5 @@
 <template>
-<div>
-  <Nav />
+<div class="uk-padding-contents">
   <div>
   <h1>Contact</h1>
   <h3>ADDRESS</h3>
@@ -17,11 +16,9 @@
 </template>
 
 <script>
-import Nav from '../components/Nav';
 
 export default {
   components: {
-    Nav,
   },
 };
 </script>
