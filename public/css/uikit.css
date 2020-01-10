@@ -5863,7 +5863,7 @@ ul.uk-nav-sub {
 }
 /* Slider active color */
 input:checked + .uk-switch-slider {
-  background-color: #39f !important;
+  background-color: #ECA9A9 !important;
 }
 /* Pointer active animation */
 input:checked + .uk-switch-slider:before {
