@@ -9,12 +9,14 @@
     <li>
       <div>
         <h3>Professor</h3>
+	<hr class="uk-divider-small">
+	<Professor />
       </div>
     </li>
     <li>
       <div>
-        <People title="Ph.D. Students" category="phd"/>
-        <People title="M.S. Students" category="ms"/>
+        <Students title="Ph.D. Students" category="phd"/>
+        <Students title="M.S. Students" category="ms"/>
       </div>
     </li>
     <li>
@@ -27,12 +29,13 @@
 </template>
 
 <script>
-import People from '../components/People';
+import Students from '../components/Students';
+import Professor from '../components/Professor';
 
 export default {
   components: {
-    //Person,
-    People,
+    Students,
+    Professor,
   },
 };
 </script>

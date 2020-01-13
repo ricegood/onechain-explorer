@@ -32,7 +32,7 @@ export default {
   methods: {
     getCategoryBlocks: function () {
       const baseURI = 'http://lynx.snu.ac.kr:8082'; 
-      const getURI = baseURI + '/category/people-' + this.category; 
+      const getURI = baseURI + '/category/students-' + this.category; 
       this.$http.get(`${getURI}`)                    
       .then((result) => { 
         this.blocks = result.data.reverse(); 
