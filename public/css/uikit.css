@@ -3085,6 +3085,9 @@ select.uk-form-width-xsmall {
   margin-left: -30px;
   margin-right: -30px;
 }
+.uk-card-body > p {
+  word-wrap: break-word;
+}
 .uk-card-body > .uk-nav-default:only-child {
   margin-top: -15px;
   margin-bottom: -15px;
