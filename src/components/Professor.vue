@@ -2,7 +2,7 @@
 <div>
   <div v-for="(block, index) in blocks" class="uk-padding">
     <!-- TODO1 : content 에 여러 내용 (전화번호 등) 전달할 수 있어야 함 -->
-    <Cardr v-for="(block, index) in blocks" :imageName="block.data[0]" :title="block.data[1]" :content="block.data[2]"/>
+    <Cardr v-for="(block, index) in blocks" :imageName="block.data[0]" :title="block.data[1]" :content="contents"/>
 
     <!-- TODO2 : Fill the contents also using blocks -->
     <h3>Areas of Interests</h3>
@@ -34,7 +34,8 @@ export default {
   },
   data: function () {
     return {
-      blocks: []
+      blocks: [],
+      contents: ""
     }
   },
   created: function () {
@@ -47,6 +48,11 @@ export default {
       this.$http.get(`${getURI}`)                    
       .then((result) => { 
         this.blocks = result.data.reverse(); 
+	/* Get block data without imageName, title and Concat */
+	for (var i = 0; i < this.blocks[0].data.length-2; i++) {
+	  this.contents += this.blocks[0].data[i+2] + "\r\n";
+	}
+	console.log(this.contents);
       }) 
       .catch((error) => { 
         alert(error); 
