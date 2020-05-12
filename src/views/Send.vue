@@ -119,11 +119,12 @@ export default {
       this.texts.push(this.userInputText);
       if (this.texts_inline == "") { this.texts_inline = this.userInputText; }
       else { this.texts_inline += ("\n" + this.userInputText); }
-      console.log(this.texts_inline)
       this.userInputText = "";
     },
     removeTexts: function () {
       this.texts = [];
+      this.texts_preview = "";
+      this.texts_inline = "";
     },
     sendTexts: function () {
       const l = this.loader;
