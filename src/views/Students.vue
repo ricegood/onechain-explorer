@@ -8,7 +8,7 @@
   <h3>{{title}}</h3>
   <hr class="uk-divider-small">     
   <div class="uk-child-width-1-1 uk-child-width-1-2@s uk-child-width-1-3@m uk-padding" uk-grid>
-    <Cardb v-for="(block, index) in blocks" :imageName="block.data[0]" :title="block.data[1]" :content="block.data[2]"/>
+    <Cardb v-for="(block) in blocks" v-bind:key="block" :imageName="block.data[0]" :title="block.data[1]" :content="block.data[2]"/>
   </div>
 </div>
 </template>
