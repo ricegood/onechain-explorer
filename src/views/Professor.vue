@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import Cardr from './Card-right';
+import Cardr from '../components/Card-right';
 
 export default {
   props: [],

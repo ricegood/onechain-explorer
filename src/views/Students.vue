@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Cardb from './Card-bottom';
+import Cardb from '../components/Card-bottom';
 
 export default {
   props: ['title', 'category'],

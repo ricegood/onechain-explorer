@@ -29,8 +29,8 @@
 </template>
 
 <script>
-import Students from '../components/Students';
-import Professor from '../components/Professor';
+import Students from './Students';
+import Professor from './Professor';
 
 export default {
   components: {
