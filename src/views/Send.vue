@@ -2,8 +2,8 @@
 <div class = "uk-padding-contents">
   <v-container grid-list-xl>
     <v-layout raw wrap>
-      <v-flex xs12 sm12>
-        <v-card color=blue>
+      <v-flex xs12 md6>
+        <v-card color=blue style="margin-bottom:10px;">
           <v-row>
             <v-col cols="12">
               <v-select style="margin-left:14px; margin-right:14px;" 
@@ -15,11 +15,7 @@
             </v-col>
           </v-row>
         </v-card>
-      </v-flex>
-    </v-layout>
-    <v-layout raw wrap>
-      <v-flex xs12 sm12>
-        <v-card color=blue>
+        <v-card color=blue style="margin-bottom:10px;">
           <v-row>
             <v-col cols="12">
               <v-text-field
@@ -38,10 +34,6 @@
             </v-col>
           </v-row>
         </v-card>
-      </v-flex>
-    </v-layout>
-    <v-layout row wrap>
-      <v-flex xs12 sm12>
         <v-card>
           <v-card-text>
             <v-simple-table dense>
@@ -76,12 +68,9 @@
           </v-card-actions>
         </v-card>
       </v-flex>
-    </v-layout>
-    <v-layout raw wrap>
-      <v-flex xs12 sm12>
+      <v-flex xs12 md6>
         <vue-markdown>## :eyes: Preview</vue-markdown>
-        <vue-markdown :source="texts_preview">
-        </vue-markdown>
+        <vue-markdown :source="texts_preview"></vue-markdown>
       </v-flex>
     </v-layout>
   </v-container>
