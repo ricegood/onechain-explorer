@@ -79,7 +79,7 @@
     </v-layout>
     <v-layout raw wrap>
       <v-flex xs12 sm12>
-        <vue-markdown>## :eyes: Previews</vue-markdown>
+        <vue-markdown>## :eyes: Preview</vue-markdown>
         <vue-markdown :source="texts_preview">
         </vue-markdown>
       </v-flex>
