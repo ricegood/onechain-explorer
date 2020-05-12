@@ -30,6 +30,7 @@
                 flat
                 hide-details
                 v-model=userInputText
+		@input="updatePreview"
                 @keyup.enter="inputText()"
                 @click:append="inputText()"
               >
@@ -76,18 +77,32 @@
         </v-card>
       </v-flex>
     </v-layout>
+    <v-layout raw wrap>
+      <v-flex xs12 sm12>
+        <vue-markdown>## :eyes: Previews</vue-markdown>
+        <vue-markdown :source="texts_preview">
+        </vue-markdown>
+      </v-flex>
+    </v-layout>
   </v-container>
 </div>
 </template>
 
 <script>
+import VueMarkdown from 'vue-markdown';
+
 export default {
+  components: {
+    VueMarkdown
+  },
   data: function () {
     return {
       e1: null,
       categories: ['professor', 'students', 'alumni', 'research', 'demo', 'technical_report', 'publication', 'news'],
       userInputText: "",
       texts: [],
+      texts_inline: "",
+      texts_preview: "",
       loader: null,
       loading: false,
       goDark: this.$vuetify.theme.dark
@@ -97,8 +112,14 @@ export default {
     loader () {},
   },
   methods: {
+    updatePreview: function () {
+      this.texts_preview = this.texts_inline + "\n" + this.userInputText;
+    },
     inputText: function () {
       this.texts.push(this.userInputText);
+      if (this.texts_inline == "") { this.texts_inline = this.userInputText; }
+      else { this.texts_inline += ("\n" + this.userInputText); }
+      console.log(this.texts_inline)
       this.userInputText = "";
     },
     removeTexts: function () {

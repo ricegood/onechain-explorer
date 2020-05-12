@@ -7,6 +7,7 @@ import axios from 'axios'
 import truncate from 'vue-truncate'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
+
 Vue.prototype.$http = axios
 Vue.use(truncate)
 Vue.config.productionTip = false
