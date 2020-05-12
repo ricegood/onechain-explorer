@@ -1,27 +1,22 @@
 <template>
   <v-container grid-list-xl>
     <v-layout raw wrap>
-      <v-switch
-        class="ma-4"
-        label="Realtime Updates"
-        v-model=switch1
-        color=blue
-        hide-details
-        inset
-        disabled
-      >
-      </v-switch>
-      <v-spacer></v-spacer>
-      <v-switch
-        class="ma-4"
-        label="Dark Theme"
-        v-model=goDark
-        color=blue
-        hide-details
-        inset
-        @change="setTheme()"
-      >
-      </v-switch>
+      <v-flex xs12 sm12>
+        <v-card color=blue>
+          <v-row>
+            <v-col cols="12">
+              <v-select style="margin-left:14px; margin-right:14px;" 
+                :items="categories"
+                v-model="e1"
+                label="Category"
+                single-line
+              ></v-select>
+            </v-col>
+          </v-row>
+        </v-card>
+      </v-flex>
+    </v-layout>
+    <v-layout raw wrap>
       <v-flex xs12 sm12>
         <v-card color=blue>
           <v-row>
@@ -87,6 +82,8 @@
 export default {
   data: function () {
     return {
+      e1: null,
+      categories: ['professor', 'students', 'alumni', 'research', 'demo', 'technical_report', 'publication', 'news'],
       userInputText: "",
       texts: [],
       loader: null,

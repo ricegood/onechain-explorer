@@ -1,5 +1,5 @@
 <template>
-<div style="min-height:100vh">
+<div data-app style="min-height:100vh">
   <Nav class="uk-padding-nav"/>
   <transition name="fade">
     <router-view/>
