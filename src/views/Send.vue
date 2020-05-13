@@ -21,7 +21,27 @@
             <v-col cols="12">
               <v-text-field
                 class="ma-4"
-                label="Input Text"
+                label="Image File Name"
+                solo
+                flat
+                hide-details
+                v-model=imagefile
+		:disabled="imagefield_disabled"
+              >
+              </v-text-field>
+              <v-text-field
+                class="ma-4"
+                label="Title"
+                solo
+                flat
+                hide-details
+                v-model=title
+		:disabled="datafield_disabled"
+              >
+              </v-text-field>
+              <v-text-field
+                class="ma-4"
+                label="Contents"
                 append-icon="add"
                 solo
                 flat
@@ -90,7 +110,12 @@ export default {
     return {
       e1: null,
       categories: ['professor', 'students', 'alumni', 'research', 'demo', 'technical_report', 'publication', 'news'],
+      image_categories: ['professor', 'students', 'research', 'demo', 'news'],
+      imagefield_disabled: true,
       datafield_disabled: true,
+      category: "",
+      imagefile: "",
+      title: "",
       userInputText: "",
       texts: [],
       texts_inline: "",
@@ -105,11 +130,10 @@ export default {
   },
   methods: {
     changeCategory: function (a) {
-      if (this.texts.length >= 1) { this.texts[0] = a; }
-      else { 
-        this.texts.push(a); 
-	this.datafield_disabled = false;
-      }
+      this.category = a;
+      this.datafield_disabled = false;
+      this.imagefield_disabled = !(this.image_categories.includes(a));
+      if (this.imagefield_disabled) { this.imagefile = ""; }
     },
     updatePreview: function () {
       this.texts_preview = this.texts_inline + "\n" + this.userInputText;
@@ -121,13 +145,20 @@ export default {
       this.userInputText = "";
     },
     removeTexts: function () {
-      this.texts = [this.texts[0]];
+      this.imagefile = "";
+      this.title = "";
+      this.texts = [];
       this.texts_preview = "";
       this.texts_inline = "";
     },
     sendTexts: function () {
       const l = this.loader;
       this[l] = true;
+      var totalTexts = []
+      totalTexts.push(this.category)
+      totalTexts.push(this.imagefile)
+      totalTexts.push(this.title)
+      totalTexts.push(this.texts)
 
       //const baseURI = 'https://endpoint.ainize.ai/lukepark327/onechain';
       const baseURI = 'http://lynx.snu.ac.kr:8082';
@@ -135,7 +166,7 @@ export default {
         headers: {
           'Content-type': 'application/json'
         },
-        data: this.texts
+        data: totalTexts
       })
       .then(() => {
       })
