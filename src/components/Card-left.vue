@@ -1,14 +1,20 @@
 <template>
-<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-    <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-        <img src="../images/profile.png" alt="" uk-cover>
-        <canvas width="600" height="400"></canvas>
+<div class="uk-card uk-card-default uk-grid-collapse uk-margin" uk-grid>
+    <div class="uk-card-media-right uk-cover-container uk-width-1-1 uk-width-1-4@m">
+        <img :src="require(`../images/${imageName}`)" class="uk-width-1-1" />
     </div>
-    <div>
-        <div class="uk-card-body">
-            <h3 class="uk-card-title">Media Right</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-        </div>
+    <div class="uk-card-body uk-width-1-1 uk-width-3-4@m">
+        <h3 class="uk-card-title">{{title}}</h3>
+        <vue-markdown :source="content"></vue-markdown>
     </div>
 </div>
 </template>
+
+<script>
+import VueMarkdown from 'vue-markdown';
+
+export default {
+  components: { VueMarkdown },
+  props: ['imageName', 'title', 'content']
+}
+</script>

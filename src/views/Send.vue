@@ -21,22 +21,25 @@
             <v-col cols="12">
               <v-text-field
                 class="ma-4"
-                label="Image File Name"
-                solo
-                flat
-                hide-details
-                v-model=imagefile
-		:disabled="imagefield_disabled"
-              >
-              </v-text-field>
-              <v-text-field
-                class="ma-4"
                 label="Title"
                 solo
                 flat
                 hide-details
                 v-model=title
 		:disabled="datafield_disabled"
+              >
+              </v-text-field>
+              <v-text-field
+                class="ma-4"
+                label="Image File Name"
+                append-icon="add"
+                solo
+                flat
+                hide-details
+                v-model=imagefile
+		:disabled="imagefield_disabled"
+                @keyup.enter="inputImage()"
+                @click:append="inputImage()"
               >
               </v-text-field>
               <v-text-field
@@ -60,6 +63,13 @@
           <v-card-text>
             <v-simple-table dense>
               <tbody>
+                <tr v-for="text in imagefiles" :key="text">
+                  <td>
+                    <span>
+                      {{ text }}
+                    </span>
+                  </td>
+                </tr>
                 <tr v-for="text in texts" :key="text">
                   <td>
                     <span>
@@ -115,6 +125,7 @@ export default {
       datafield_disabled: true,
       category: "",
       imagefile: "",
+      imagefiles: [],
       title: "",
       userInputText: "",
       texts: [],
@@ -133,10 +144,14 @@ export default {
       this.category = a;
       this.datafield_disabled = false;
       this.imagefield_disabled = !(this.image_categories.includes(a));
-      if (this.imagefield_disabled) { this.imagefile = ""; }
+      if (this.imagefield_disabled) { this.imagefile = ""; this.imagefiles = []; }
     },
     updatePreview: function () {
       this.texts_preview = this.texts_inline + "\n" + this.userInputText;
+    },
+    inputImage: function () {
+      this.imagefiles.push(this.imagefile);
+      this.imagefile = "";
     },
     inputText: function () {
       this.texts.push(this.userInputText);
@@ -146,6 +161,7 @@ export default {
     },
     removeTexts: function () {
       this.imagefile = "";
+      this.imagefiles = [];
       this.title = "";
       this.texts = [];
       this.texts_preview = "";
@@ -156,7 +172,7 @@ export default {
       this[l] = true;
       var totalTexts = []
       totalTexts.push(this.category)
-      totalTexts.push(this.imagefile)
+      totalTexts.push(this.imagefiles)
       totalTexts.push(this.title)
       totalTexts.push(this.texts)
 

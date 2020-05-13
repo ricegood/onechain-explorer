@@ -28,11 +28,13 @@ export default {
       this.$http.get(`${getURI}`)                    
       .then((result) => { 
         blocks = result.data.reverse(); 
-        var recentBlock = blocks[0];
-        var contentList = recentBlock.data[3];
-        for (var i = 0; i < contentList.length; i++) {
-          this.contents += contentList[i] + "\n";
-        }
+	if (blocks.length > 0) {
+          var recentBlock = blocks[0];
+          var contentList = recentBlock.data[3];
+          for (var i = 0; i < contentList.length; i++) {
+            this.contents += contentList[i] + "\n";
+          }
+	}
       }) 
       .catch((error) => { 
         alert(error); 

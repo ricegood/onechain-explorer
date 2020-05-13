@@ -1,6 +1,6 @@
 <template>
 <div>
-  <Cardr v-if="render" :imageName="image" :title="title" :content="contents"/>
+  <Cardr v-if="image" :imageName="image" :title="title" :content="contents"/>
 </div>
 </template>
 
@@ -14,7 +14,6 @@ export default {
   },
   data: function () {
     return {
-      render: false,
       image: "",
       title: "",
       contents: ""
@@ -31,14 +30,15 @@ export default {
       this.$http.get(`${getURI}`)                    
       .then((result) => { 
         blocks = result.data.reverse(); 
-        var recentBlock = blocks[0];
-        this.image = recentBlock.data[1];
-        this.title = recentBlock.data[2];
-        var contentList = recentBlock.data[3];
-        for (var i = 0; i < contentList.length; i++) {
-          this.contents += contentList[i] + "\n";
-        }
-	this.render = true;
+        if (blocks.length > 0) {
+          var recentBlock = blocks[0];
+          this.image = recentBlock.data[1][0];
+          this.title = recentBlock.data[2];
+          var contentList = recentBlock.data[3];
+          for (var i = 0; i < contentList.length; i++) {
+            this.contents += contentList[i] + "\n";
+          }
+	}
       }) 
       .catch((error) => { 
         alert(error); 
