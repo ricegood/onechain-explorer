@@ -22,6 +22,8 @@
     <li>
       <div>
         <h3>Alumni</h3>
+	<hr class="uk-divider-small">
+	<Alumni />
       </div>
     </li>
   </ul>
@@ -31,11 +33,13 @@
 <script>
 import Students from './Students';
 import Professor from './Professor';
+import Alumni from './Alumni';
 
 export default {
   components: {
     Students,
     Professor,
+    Alumni,
   },
 };
 </script>

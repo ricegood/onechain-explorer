@@ -109,8 +109,8 @@ export default {
   data: function () {
     return {
       e1: null,
-      categories: ['professor', 'students', 'alumni', 'research', 'demo', 'technical_report', 'publication', 'news'],
-      image_categories: ['professor', 'students', 'research', 'demo', 'news'],
+      categories: ['professor', 'students-phd', 'students-ms', 'alumni', 'research', 'demo', 'technical_report', 'publication', 'news'],
+      image_categories: ['professor', 'students-phd', 'students-ms', 'research', 'demo', 'news'],
       imagefield_disabled: true,
       datafield_disabled: true,
       category: "",
