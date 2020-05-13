@@ -10,6 +10,7 @@
                 :items="categories"
                 v-model="e1"
                 label="Category"
+		v-on:change="changeCategory"
                 single-line
               ></v-select>
             </v-col>
@@ -26,6 +27,7 @@
                 flat
                 hide-details
                 v-model=userInputText
+		:disabled="datafield_disabled"
 		@input="updatePreview"
                 @keyup.enter="inputText()"
                 @click:append="inputText()"
@@ -88,6 +90,7 @@ export default {
     return {
       e1: null,
       categories: ['professor', 'students', 'alumni', 'research', 'demo', 'technical_report', 'publication', 'news'],
+      datafield_disabled: true,
       userInputText: "",
       texts: [],
       texts_inline: "",
@@ -101,6 +104,13 @@ export default {
     loader () {},
   },
   methods: {
+    changeCategory: function (a) {
+      if (this.texts.length >= 1) { this.texts[0] = a; }
+      else { 
+        this.texts.push(a); 
+	this.datafield_disabled = false;
+      }
+    },
     updatePreview: function () {
       this.texts_preview = this.texts_inline + "\n" + this.userInputText;
     },
@@ -111,7 +121,7 @@ export default {
       this.userInputText = "";
     },
     removeTexts: function () {
-      this.texts = [];
+      this.texts = [this.texts[0]];
       this.texts_preview = "";
       this.texts_inline = "";
     },
