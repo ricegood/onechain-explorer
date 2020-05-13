@@ -2,27 +2,6 @@
 <div class="uk-padding-contents">
   <v-container grid-list-xl>
     <v-layout raw wrap>
-      <v-switch
-        class="ma-4"
-        label="Realtime Updates"
-        v-model=switch1
-        color=blue
-        hide-details
-        inset
-        @change="getLatestBlocks(12)"
-      >
-      </v-switch>
-      <v-spacer></v-spacer>
-      <v-switch
-        class="ma-4"
-        label="Dark Theme"
-        v-model=goDark
-        color=blue
-        hide-details
-        inset
-        @change="setTheme()"
-      >
-      </v-switch>
       <v-flex xs12 sm12>
         <v-card color=blue>      
           <v-row>
